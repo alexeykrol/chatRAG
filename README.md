@@ -1,5 +1,8 @@
 # ChatOpenAI Integration Assistant
 
+> 🤖 **AI Development:** This project uses [Claude Code Starter Framework](./FRAMEWORK_GUIDE.md). See [usage guide](./FRAMEWORK_GUIDE.md) for details.
+
+
 **Version: 1.6** | **Last Updated: 2025-01-31**
 
 Приложение для работы с OpenAI API с поддержкой ассистентов, RAG (Retrieval-Augmented Generation) и векторного поиска.

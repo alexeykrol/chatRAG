@@ -26,3 +26,7 @@ push_git.sh
 # Environment variables - all variants
 .env*
 !.env.example
+dialog/
+html-viewer/
+.claude/.last_session
+.claude/.backup-*

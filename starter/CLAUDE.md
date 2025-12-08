@@ -167,4 +167,4 @@ npm run dialog:list     # List sessions
 - ALWAYS mark session clean at completion
 
 ---
-*Framework: Claude Code Starter v2.1.0 | Updated: 2025-12-08*
+*Framework: Claude Code Starter v2.0 | Updated: 2025-12-07*
