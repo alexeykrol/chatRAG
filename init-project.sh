@@ -225,6 +225,11 @@ generate_meta_files_new() {
     log_success "Generated meta files (edit them to customize)"
 }
 
+# Helper function to escape special characters for sed
+sed_escape() {
+    echo "$1" | sed 's/[&/\]/\\&/g'
+}
+
 generate_meta_files_legacy() {
     log_info "Analyzing project and generating meta files..."
 
@@ -258,12 +263,15 @@ generate_meta_files_legacy() {
     [ -f "Cargo.toml" ] && TECH_STACK="$TECH_STACK\n- Rust"
     [ -z "$TECH_STACK" ] && TECH_STACK="\n- Unknown (please update)"
 
+    # Escape special characters for sed
+    local PROJECT_DESCRIPTION_ESCAPED=$(sed_escape "$PROJECT_DESCRIPTION")
+
     # Generate SNAPSHOT.md with project data
     sed -e "s/{{PROJECT_NAME}}/$PROJECT_NAME/g" \
         -e "s/{{DATE}}/$DATE/g" \
         -e "s/{{PROJECT_VERSION}}/$PROJECT_VERSION/g" \
         -e "s/{{CURRENT_BRANCH}}/$BRANCH/g" \
-        -e "s/{{PROJECT_DESCRIPTION}}/$PROJECT_DESCRIPTION/g" \
+        -e "s|{{PROJECT_DESCRIPTION}}|$PROJECT_DESCRIPTION_ESCAPED|g" \
         -e "s|{{TECH_STACK}}|$TECH_STACK|g" \
         -e "s|{{PROJECT_STRUCTURE}}|Run 'tree -L 2' or 'ls -la' to see structure|g" \
         -e "s|{{PROJECT_KEY_CONCEPTS}}|Extracted from existing project. Please review and update.|g" \
@@ -284,7 +292,7 @@ generate_meta_files_legacy() {
 
     # Generate ARCHITECTURE.md with project analysis
     sed -e "s/{{PROJECT_NAME}}/$PROJECT_NAME/g" \
-        -e "s/{{PROJECT_DESCRIPTION}}/$PROJECT_DESCRIPTION/g" \
+        -e "s|{{PROJECT_DESCRIPTION}}|$PROJECT_DESCRIPTION_ESCAPED|g" \
         -e "s|{{TECH_STACK}}|$TECH_STACK|g" \
         -e "s|{{PROJECT_STRUCTURE}}|Run 'tree -L 2' or 'ls -la' to see structure|g" \
         -e "s|{{COMPONENT_1_NAME}}|Main Application|g" \

@@ -8,45 +8,47 @@
 
 Your old framework files are saved in:
 `[0;34mℹ[0m Creating backup of old framework files...
-[0;32m✓[0m Backup created: .claude/.backup-20251208-152941
-[3.0 9fb833bf] backup: Save old framework before migration to v2.1.0
- Committer: Alexey Krol <alexeykrolmini@AlexStuduos-Mac-Studio.local>
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly:
+[0;32m✓[0m Backup created: .claude/.backup-20251208-204545
+On branch 3.0
+Your branch is ahead of 'origin/3.0' by 2 commits.
+  (use "git push" to publish your local commits)
 
-    git config --global user.name "Your Name"
-    git config --global user.email you@example.com
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   init-project.sh
+	deleted:    starter.zip
+	deleted:    starter/.claude/commands/commit.md
+	deleted:    starter/.claude/commands/db-migrate.md
+	deleted:    starter/.claude/commands/explain.md
+	deleted:    starter/.claude/commands/feature.md
+	deleted:    starter/.claude/commands/fi.md
+	deleted:    starter/.claude/commands/fix.md
+	deleted:    starter/.claude/commands/migrate-finalize.md
+	deleted:    starter/.claude/commands/migrate-resolve.md
+	deleted:    starter/.claude/commands/migrate-rollback.md
+	deleted:    starter/.claude/commands/migrate.md
+	deleted:    starter/.claude/commands/optimize.md
+	deleted:    starter/.claude/commands/pr.md
+	deleted:    starter/.claude/commands/refactor.md
+	deleted:    starter/.claude/commands/release.md
+	deleted:    starter/.claude/commands/review.md
+	deleted:    starter/.claude/commands/security.md
+	deleted:    starter/.claude/commands/test.md
+	deleted:    starter/.claude/commands/ui.md
+	deleted:    starter/.claude/commands/watch.md
+	deleted:    starter/CLAUDE.md
+	deleted:    starter/FRAMEWORK_GUIDE.template.md
+	deleted:    starter/MIGRATION_GUIDE.md
+	deleted:    starter/init-project.sh
+	deleted:    starter/templates/ARCHITECTURE.template.md
+	deleted:    starter/templates/BACKLOG.template.md
+	deleted:    starter/templates/SNAPSHOT.template.md
 
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 22 files changed, 2283 insertions(+)
- create mode 100644 .claude/.backup-20251208-152941/CLAUDE.md
- create mode 100644 .claude/.backup-20251208-152941/SNAPSHOT.md
- create mode 100644 .claude/.backup-20251208-152941/SNAPSHOT.md.bak
- create mode 100644 .claude/.backup-20251208-152941/commands/commit.md
- create mode 100644 .claude/.backup-20251208-152941/commands/db-migrate.md
- create mode 100644 .claude/.backup-20251208-152941/commands/explain.md
- create mode 100644 .claude/.backup-20251208-152941/commands/feature.md
- create mode 100644 .claude/.backup-20251208-152941/commands/fi.md
- create mode 100644 .claude/.backup-20251208-152941/commands/fix.md
- create mode 100644 .claude/.backup-20251208-152941/commands/optimize.md
- create mode 100644 .claude/.backup-20251208-152941/commands/pr.md
- create mode 100644 .claude/.backup-20251208-152941/commands/refactor.md
- create mode 100644 .claude/.backup-20251208-152941/commands/release.md
- create mode 100644 .claude/.backup-20251208-152941/commands/review.md
- create mode 100644 .claude/.backup-20251208-152941/commands/security.md
- create mode 100644 .claude/.backup-20251208-152941/commands/test.md
- create mode 100644 .claude/.backup-20251208-152941/commands/ui.md
- create mode 100644 .claude/.backup-20251208-152941/commands/watch.md
- create mode 100644 .claude/.backup-20251208-152941/settings.local.json
- create mode 100644 .claude/.backup-20251208-152941/templates/ARCHITECTURE.template.md
- create mode 100644 .claude/.backup-20251208-152941/templates/BACKLOG.template.md
- create mode 100644 .claude/.backup-20251208-152941/templates/SNAPSHOT.template.md
+no changes added to commit (use "git add" and/or "git commit -a")
+[1;33m⚠[0m Failed to commit backup (might be nothing to commit)
 [0;32m✓[0m Backup committed to git
-.claude/.backup-20251208-152941`
+.claude/.backup-20251208-204545`
 
 And committed to git history.
 

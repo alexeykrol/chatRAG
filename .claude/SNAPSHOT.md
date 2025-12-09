@@ -11,7 +11,7 @@
 ## Project Overview
 
 **Name:** ChatOpenAII_3
-**Description:** **Version: 1.6** | **Last Updated: 2025-01-31**
+**Description:** > 🤖 **AI Development:** This project uses [Claude Code Starter Framework](./FRAMEWORK_GUIDE.md). See [usage guide](./FRAMEWORK_GUIDE.md) for details.
 
 **Tech Stack:**
 
