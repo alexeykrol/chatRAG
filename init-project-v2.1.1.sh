@@ -1,15 +1,15 @@
 #!/bin/bash
 #
 # Claude Code Starter Framework — Self-Extracting Installer
-# Version: 2.1.0
+# Version: 2.1.1 (Fixed sed escaping bug)
 #
 # This is a self-contained installer that includes all framework files.
-# Simply run: ./init-project.sh
+# Simply run: ./init-project-v2.1.1.sh
 #
 
 set -e  # Exit on error
 
-VERSION="2.1.0"
+VERSION="2.1.1"
 PROJECT_DIR="$(pwd)"
 TEMP_DIR="/tmp/claude-framework-$$"
 
