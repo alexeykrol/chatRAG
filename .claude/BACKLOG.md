@@ -3,11 +3,20 @@
 *Task tracking for chatRAG*
 
 **Last Updated:** 2025-12-08
-**Current Sprint:** Documentation Update
+**Current Sprint:** Bug Fixes
 
 ---
 
-## Active Sprint: Documentation Update
+## Active Sprint: Bug Fixes
+
+### Completed (2025-12-08)
+- [x] ✅ Fix `dialog:ui` script in package.json — was pointing to server.js directly instead of CLI (2025-12-08)
+- [x] ✅ Fix parasitic project folder bug in watcher.js — Claude was creating `-chatRAG-dialog` folder (2025-12-08)
+- [x] ✅ Remove parasitic folder `~/.claude/projects/-Users-...-chatRAG-dialog/` (2025-12-08)
+
+---
+
+## Previous Sprint: Documentation Update (Completed)
 
 ### High Priority
 - [x] ✅ Update ARCHITECTURE.md with real code analysis (2025-12-08)

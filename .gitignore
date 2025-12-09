@@ -47,8 +47,3 @@ html-viewer/
 *.bak
 *.backup
 *.old
-
-# Claude dialogs
-dialog/2025-12-08_session-7d0bd89f.md
-dialog/2025-12-08_session-e80e5a6a.md
-dialog/2025-12-08_session-1792f024.md

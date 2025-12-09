@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "dialog:export": "node .claude/dist/claude-export/cli.js export",
     "dialog:list": "node .claude/dist/claude-export/cli.js list",
-    "dialog:ui": "node .claude/dist/claude-export/server.js",
+    "dialog:ui": "node .claude/dist/claude-export/cli.js ui",
     "dialog:watch": "node .claude/dist/claude-export/watcher.js"
   },
   "dependencies": {

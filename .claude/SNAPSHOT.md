@@ -234,9 +234,14 @@ chatRAG/
 
 ## Active Work
 
-**Current Focus:** None — Documentation sprint completed successfully
+**Current Focus:** None — Bug fix sprint completed
 
-**Recently Completed Sprint:** Documentation Update (2025-12-08)
+**Recently Completed Sprint:** Bug Fixes (2025-12-08)
+- Fixed `dialog:ui` script in package.json
+- Fixed parasitic project folder bug in watcher.js
+- Removed parasitic `chatRAG-dialog` folder from Claude system
+
+**Previous Sprint:** Documentation Update (2025-12-08)
 - [x] ARCHITECTURE.md — ✅ Complete (685 lines)
 - [x] SNAPSHOT.md — ✅ Complete (384 lines)
 - [x] BACKLOG.md — ✅ Complete (418 lines)
