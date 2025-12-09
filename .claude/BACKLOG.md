@@ -1,6 +1,6 @@
-# BACKLOG — ChatOpenAII_3
+# BACKLOG — chatRAG
 
-*Task tracking for ChatOpenAII_3*
+*Task tracking for chatRAG*
 
 ## Active Sprint
 
@@ -35,6 +35,8 @@
 
 ### Recently Completed
 - [x] Initialized Claude Code Starter Framework (2025-12-08)
+- [x] Configured dialog export system (2025-12-08)
+- [x] Fixed framework npm scripts and dependencies (2025-12-08)
 
 ## Notes
 
