@@ -13,9 +13,13 @@
 - [x] ✅ Update ARCHITECTURE.md with real code analysis (2025-12-08)
 - [x] ✅ Update SNAPSHOT.md with current state (2025-12-08)
 - [x] ✅ Update BACKLOG.md with real tasks (2025-12-08)
-- [ ] Synchronize project versions (README v1.6 vs package.json v0.0.0)
-- [ ] Review and update README.md for accuracy
-- [ ] Review FRAMEWORK_GUIDE.md for relevance
+- [x] ✅ Synchronize project versions (README v1.6 vs package.json v0.0.0) (2025-12-08)
+- [x] ✅ Review and update README.md for accuracy (2025-12-08)
+- [x] ✅ Review FRAMEWORK_GUIDE.md for relevance (2025-12-08)
+- [x] ✅ Create CHANGELOG.md for version history (2025-12-08)
+- [x] ✅ Create .env.example template (2025-12-08)
+- [x] ✅ Remove legacy files from git (25 files) (2025-12-08)
+- [x] ✅ Clean up .claude/ directory (2025-12-08)
 
 ---
 
