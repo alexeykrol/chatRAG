@@ -1,320 +1,343 @@
-# ChatOpenAI Integration Assistant
+# chatRAG
 
-> 🤖 **AI Development:** This project uses [Claude Code Starter Framework](./FRAMEWORK_GUIDE.md). See [usage guide](./FRAMEWORK_GUIDE.md) for details.
+> 🤖 **AI Development:** This project uses [Claude Code Starter Framework](./FRAMEWORK_GUIDE.md) v2.1.1
 
+**Version:** 1.6.0 | **Last Updated:** 2025-12-08
 
-**Version: 1.6** | **Last Updated: 2025-01-31**
-
-Приложение для работы с OpenAI API с поддержкой ассистентов, RAG (Retrieval-Augmented Generation) и векторного поиска.
+Полнофункциональное веб-приложение для работы с OpenAI Assistants API с поддержкой RAG (Retrieval-Augmented Generation), векторного поиска и мультиперсональных чатов.
 
 ---
 
 ## 📚 Documentation
 
 ### For Developers & AI Agents
-- **[AGENTS.md](AGENTS.md)** - AI agent instructions and development guidelines
-- **[ARCHITECTURE.md](ARCHITECTURE.md)** - System architecture and technical decisions
-- **[BACKLOG.md](BACKLOG.md)** - Implementation status and roadmap (SINGLE SOURCE OF TRUTH)
-- **[WORKFLOW.md](WORKFLOW.md)** - Development workflows and sprint processes
-- **[supabase/docs/DATABASE_CHANGELOG.md](supabase/docs/DATABASE_CHANGELOG.md)** - Database schema history
+
+- **[.claude/ARCHITECTURE.md](.claude/ARCHITECTURE.md)** — Detailed system architecture and technical decisions
+- **[.claude/SNAPSHOT.md](.claude/SNAPSHOT.md)** — Current project state and implemented features
+- **[.claude/BACKLOG.md](.claude/BACKLOG.md)** — Task tracking and roadmap
+- **[CLAUDE.md](CLAUDE.md)** — AI agent instructions (Cold Start Protocol)
+- **[supabase/docs/DATABASE_CHANGELOG.md](supabase/docs/DATABASE_CHANGELOG.md)** — Database schema history
 
 ### Quick Start for AI Agents
-1. Read [AGENTS.md](AGENTS.md) - Core instructions and patterns
-2. Read [ARCHITECTURE.md](ARCHITECTURE.md) - System design
-3. Read [BACKLOG.md](BACKLOG.md) - Current status and priorities
-4. Read [WORKFLOW.md](WORKFLOW.md) - Sprint processes
+
+1. Run `начать` or `start` to execute Cold Start Protocol
+2. Read [.claude/ARCHITECTURE.md](.claude/ARCHITECTURE.md) for system design
+3. Read [.claude/SNAPSHOT.md](.claude/SNAPSHOT.md) for current status
+4. Read [.claude/BACKLOG.md](.claude/BACKLOG.md) for priorities
 
 ---
 
-## ✨ Новые возможности v1.6
+## ✨ Key Features
 
-- 📚 **Реструктуризация документации** - разделение на AGENTS.md, ARCHITECTURE.md, BACKLOG.md, WORKFLOW.md
-- 🤖 **Универсальные инструкции для AI** - совместимость с Claude Code, Cursor, Copilot
-- 📋 **Четкий бэклог** - BACKLOG.md как единый источник истины для статуса проекта
-- 🔄 **Стандартизированные процессы** - WORKFLOW.md с чеклистами и шаблонами
+### Core Functionality
 
-## ✨ Возможности v1.3
+- **Multi-personality Chat System** — Create and manage custom AI assistants
+- **RAG Support** — Upload and search documents (PDF, DOCX, TXT)
+- **Vector Search** — Semantic search via OpenAI Vector Stores
+- **Memory & Summarization** — Configurable conversation summarization
+- **Token Tracking** — Monitor API usage and costs
+- **Secure Storage** — Encrypted API key storage
 
-- 🏗️ **Модульная архитектура** - независимые сервисы для управления ассистентами и векторными хранилищами
-- 📁 **Полная векторизация файлов** - загруженные файлы автоматически векторизуются для семантического поиска
-- 🔧 **Оптимизированы API-вызовы** - убрано дублирование запросов к OpenAI
-- 🌐 **Автотранслитерация имен** - кириллические имена автоматически конвертируются для OpenAI
-- 🔄 **Синхронизация с OpenAI** - изменения имен ассистентов автоматически синхронизируются
+### Technical Highlights
 
-## 🚀 Основные возможности
-
-- **Мультиперсональные чаты** с настраиваемыми ассистентами OpenAI
-- **RAG поддержка** для работы с документами (PDF, DOCX, TXT)
-- **Векторный поиск** по загруженным файлам через OpenAI Vector Stores
-- **Управление контекстом** и память разговоров
-- **Подсчет токенов** и мониторинг использования API
-- **Безопасное хранение** API-ключей с шифрованием
-
-## 🛠️ Технологии
-
-- **Frontend:** React 18, TypeScript, Tailwind CSS
-- **Backend:** Supabase (PostgreSQL, Auth, Storage)
-- **AI:** OpenAI Assistants API, Vector Stores API, Embeddings API
-- **Векторная БД:** OpenAI Vector Stores для семантического поиска
+- **Modular Architecture** — Independent services (Assistant, VectorStore, Integration, RAG)
+- **Cyrillic Auto-transliteration** — Russian names automatically converted for OpenAI
+- **OpenAI Sync** — Automatic synchronization with OpenAI Assistants
+- **Thread-based Conversations** — Full context preservation via Threads API
+- **Type Safety** — Full TypeScript coverage
 
 ---
 
-## 🚀 Quick Start (для разработчиков)
+## 🛠️ Tech Stack
+
+**Frontend:**
+- React 18 + TypeScript
+- Vite (build tool)
+- Tailwind CSS
+- Zustand (state management)
+- React Markdown + Syntax Highlighting
+
+**Backend & Services:**
+- Supabase (PostgreSQL + Auth + Storage)
+- OpenAI Assistants API
+- OpenAI Threads API
+- OpenAI Vector Stores API
+- OpenAI Embeddings API
+
+**Development:**
+- Claude Code Starter Framework v2.1.1
+- 15 slash commands for development workflows
+- Dialog export and management system
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ (рекомендуется LTS)
-- npm или yarn
-- OpenAI API key
-- Supabase account
+
+- Node.js 18+ (LTS recommended)
+- npm or yarn
+- Supabase account ([supabase.com](https://supabase.com))
+- OpenAI API key ([platform.openai.com](https://platform.openai.com))
 
 ### Installation
+
 ```bash
 # 1. Clone repository
-git clone https://github.com/ваш-репозиторий/ChatOpenAIIntegrationAssist.git
-cd ChatOpenAIIntegrationAssist
+git clone <your-repo-url>
+cd chatRAG
 
 # 2. Install dependencies
 npm install
 
 # 3. Setup environment
 cp .env.example .env.local
-# Edit .env.local with your Supabase credentials
+# Edit .env.local with your Supabase credentials:
+# VITE_SUPABASE_URL=your_supabase_url
+# VITE_SUPABASE_ANON_KEY=your_anon_key
 
 # 4. Apply database migrations
-cd supabase/scripts
-node apply-migration.mjs  # Follow latest migration in ../migrations/
+cd supabase/migrations
+# Apply migrations in order (check file dates)
+# Use Supabase SQL Editor or supabase CLI
 
 # 5. Start development server
 npm run dev
 ```
 
 ### First Run
+
 1. Open http://localhost:5173/
 2. Sign up with email/password
-3. Add OpenAI API key in Settings
+3. Go to Settings (⚙️ icon) and add your OpenAI API key
 4. Create your first personality/assistant
-5. Start chatting!
+5. Upload files (optional) for RAG
+6. Start chatting!
 
 ---
 
-## 📦 Подробная инструкция по установке (для начинающих)
+## 📦 Project Structure
 
-### Шаг 1: Установка необходимых программ
-
-#### 1.1 Установка Node.js
-Node.js - это программа для запуска JavaScript кода на вашем компьютере.
-
-1. Перейдите на сайт https://nodejs.org/
-2. Скачайте версию "LTS" (рекомендуемая стабильная версия)
-3. Запустите скачанный установщик
-4. Следуйте инструкциям установщика, оставляя все настройки по умолчанию
-5. После установки откройте командную строку (Terminal на Mac, cmd на Windows)
-6. Введите команду `node --version` и нажмите Enter
-7. Если появилась версия (например, v20.11.0), установка прошла успешно
-
-#### 1.2 Установка Git
-Git - это программа для скачивания кода из интернета.
-
-**Для Windows:**
-1. Скачайте Git с https://git-scm.com/download/windows
-2. Запустите установщик
-3. Оставьте все настройки по умолчанию, просто нажимайте "Next"
-
-**Для Mac:**
-1. Откройте Terminal
-2. Введите команду: `git --version`
-3. Если Git не установлен, система предложит его установить
-4. Следуйте инструкциям
-
-### Шаг 2: Скачивание проекта
-
-1. Создайте папку для проекта (например, на рабочем столе)
-2. Откройте командную строку (Terminal/cmd)
-3. Перейдите в созданную папку командой:
-   ```bash
-   # Для Windows (если папка на рабочем столе):
-   cd C:\Users\ВашеИмя\Desktop\ВашаПапка
-   
-   # Для Mac (если папка на рабочем столе):
-   cd ~/Desktop/ВашаПапка
-   ```
-   *Замените "ВашеИмя" и "ВашаПапка" на реальные названия*
-
-4. Скачайте проект командой:
-   ```bash
-   git clone https://github.com/ваш-репозиторий/ChatOpenAIIntegrationAssist.git
-   ```
-   *Замените "ваш-репозиторий" на реальный адрес*
-
-5. Перейдите в папку проекта:
-   ```bash
-   cd ChatOpenAIIntegrationAssist
-   ```
-
-### Шаг 3: Установка зависимостей
-
-Зависимости - это дополнительные программы, необходимые для работы приложения.
-
-1. В командной строке (уже находясь в папке проекта) введите:
-   ```bash
-   npm install
-   ```
-2. Дождитесь окончания установки (может занять 2-5 минут)
-3. Если появились предупреждения (warnings) - это нормально
-4. Если появились ошибки (errors) - обратитесь за помощью
-
-### Шаг 4: Получение API ключа OpenAI
-
-API ключ - это пароль для доступа к искусственному интеллекту OpenAI.
-
-1. Зарегистрируйтесь на https://platform.openai.com/
-2. Подтвердите email
-3. Перейдите в раздел "API keys" (https://platform.openai.com/api-keys)
-4. Нажмите кнопку "Create new secret key"
-5. Дайте ключу имя (например, "ChatAssistant")
-6. **ВАЖНО:** Скопируйте ключ сразу! Он больше не покажется
-7. Сохраните ключ в надежном месте (например, в файле на компьютере)
-
-**Примечание о стоимости:**
-- Использование OpenAI API платное
-- Новые аккаунты получают бесплатные кредиты ($5-18)
-- Стоимость зависит от использования (примерно $0.01-0.03 за запрос)
-- Установите лимиты в настройках OpenAI для контроля расходов
-
-### Шаг 5: Настройка Supabase (база данных)
-
-Supabase - это бесплатная база данных для хранения ваших чатов.
-
-1. Зарегистрируйтесь на https://supabase.com/ (можно через GitHub)
-2. Нажмите "New project" (Новый проект)
-3. Заполните:
-   - **Name:** ChatAssistant (или любое название)
-   - **Database Password:** придумайте сложный пароль и сохраните его
-   - **Region:** выберите ближайший регион (например, Frankfurt для Европы)
-4. Нажмите "Create new project" и подождите 2-3 минуты
-
-### Шаг 6: Настройка базы данных
-
-1. В Supabase перейдите в раздел "SQL Editor" (слева в меню)
-2. Нажмите "New query" (Новый запрос)
-3. Откройте файлы из папки проекта `supabase/migrations/` по очереди
-4. Для каждого файла:
-   - Скопируйте содержимое файла
-   - Вставьте в SQL Editor
-   - Нажмите "Run" (Выполнить)
-   - Дождитесь сообщения "Success"
-5. Выполните файлы в порядке их дат (сначала более ранние)
-
-### Шаг 7: Создание файла настроек
-
-1. В папке проекта создайте файл `.env.local` (точка в начале обязательна!)
-2. Откройте его в текстовом редакторе (Блокнот на Windows, TextEdit на Mac)
-3. Вставьте следующее:
-   ```
-   VITE_SUPABASE_URL=ваш_url_supabase
-   VITE_SUPABASE_ANON_KEY=ваш_anon_ключ
-   ```
-
-4. Получите эти данные из Supabase:
-   - Перейдите в "Settings" → "API"
-   - Скопируйте "Project URL" и вставьте вместо `ваш_url_supabase`
-   - Скопируйте "anon public" ключ и вставьте вместо `ваш_anon_ключ`
-
-5. Сохраните файл
-
-### Шаг 8: Запуск приложения
-
-1. В командной строке (в папке проекта) введите:
-   ```bash
-   npm run dev
-   ```
-2. Появится сообщение с адресом, например:
-   ```
-   Local: http://localhost:5173/
-   ```
-3. Откройте этот адрес в браузере (Chrome, Firefox, Safari)
-4. Приложение должно открыться!
-
-### Шаг 9: Первое использование
-
-1. **Регистрация:**
-   - Нажмите "Sign Up" (Регистрация)
-   - Введите email и пароль
-   - Подтвердите email (проверьте почту)
-
-2. **Добавление API ключа:**
-   - После входа нажмите на иконку настроек (шестеренка)
-   - Вставьте ваш OpenAI API ключ
-   - Нажмите "Save" (Сохранить)
-
-3. **Создание первого ассистента:**
-   - Нажмите "+ New Personality" (Новая личность)
-   - Введите имя (например, "Помощник")
-   - Введите инструкции (например, "Ты дружелюбный помощник")
-   - Нажмите "Create" (Создать)
-
-4. **Загрузка файлов (опционально):**
-   - При создании личности можно перетащить файлы в специальную область
-   - Поддерживаются форматы: PDF, DOCX, TXT
-   - Файлы будут использоваться ассистентом для ответов
-
-## 🔧 Ежедневное использование
-
-### Запуск приложения
-1. Откройте командную строку
-2. Перейдите в папку проекта:
-   ```bash
-   cd путь/к/ChatOpenAIIntegrationAssist
-   ```
-3. Запустите:
-   ```bash
-   npm run dev
-   ```
-4. Откройте http://localhost:5173/ в браузере
-
-### Остановка приложения
-- В командной строке нажмите `Ctrl+C` (Windows) или `Cmd+C` (Mac)
-
-## ❓ Решение проблем
-
-### Ошибка "npm: command not found"
-- Node.js не установлен или не добавлен в PATH
-- Переустановите Node.js, следуя инструкции выше
-
-### Ошибка "Cannot find module"
-- Не установлены зависимости
-- Выполните `npm install` в папке проекта
-
-### Приложение не открывается
-- Проверьте, запущен ли сервер (`npm run dev`)
-- Проверьте правильность адреса (http://localhost:5173/)
-- Попробуйте другой браузер
-
-### Ошибка подключения к Supabase
-- Проверьте файл `.env.local`
-- Убедитесь, что URL и ключи скопированы правильно
-- Проверьте, не истек ли проект Supabase (бесплатные проекты останавливаются после 7 дней неактивности)
-
-### Ошибка OpenAI API
-- Проверьте правильность API ключа
-- Проверьте баланс в аккаунте OpenAI
-- Убедитесь, что ключ активен
-
-## 📝 Дополнительная информация
-
-### Структура проекта
-- `src/` - исходный код приложения
-- `src/components/` - компоненты интерфейса
-- `src/lib/` - сервисы для работы с API
-- `supabase/migrations/` - файлы для настройки базы данных
-- `.env.local` - файл с секретными настройками (не загружается в Git)
-
-### Безопасность
-- Никогда не делитесь своими API ключами
-- Не загружайте файл `.env.local` в публичные репозитории
-- Регулярно проверяйте использование API в панели OpenAI
-- Установите лимиты расходов в настройках OpenAI
+```
+chatRAG/
+├── src/                    # Application source
+│   ├── components/         # React UI components
+│   ├── lib/                # Services & business logic
+│   ├── store/              # Zustand state management
+│   ├── retrieval/          # Summarization system
+│   └── pages/              # API routes
+├── .claude/                # Framework meta files
+│   ├── commands/           # 15 slash commands
+│   ├── ARCHITECTURE.md     # Detailed architecture
+│   ├── SNAPSHOT.md         # Current state
+│   └── BACKLOG.md          # Task tracking
+├── supabase/
+│   ├── migrations/         # Database migrations
+│   ├── scripts/            # Migration helpers
+│   └── docs/               # Database documentation
+├── CLAUDE.md               # AI agent instructions
+└── package.json            # Dependencies
+```
 
 ---
 
-*Разработано с использованием [Claude Code](https://claude.ai/code)*
+## 🔧 Development Commands
+
+### Application
+
+```bash
+npm run dev              # Start dev server (Vite on :5173)
+npm run build            # Build for production
+npm run preview          # Preview production build
+npm run lint             # Run ESLint
+```
+
+### Dialog Management (Framework)
+
+```bash
+npm run dialog:export    # Export AI conversation sessions
+npm run dialog:list      # List all sessions
+npm run dialog:ui        # Launch web UI (:3333)
+npm run dialog:watch     # Auto-export watcher
+```
+
+### Slash Commands (AI Development)
+
+Available via Claude Code CLI or AI sessions:
+
+- `/commit` — Create git commit with proper message
+- `/pr` — Create pull request with summary
+- `/fix` — Help find and fix bugs
+- `/feature` — Plan new feature implementation
+- `/review` — Code review for recent changes
+- `/test` — Help write tests
+- `/security` — Security audit
+- `/optimize` — Performance optimization
+- `/refactor` — Code refactoring assistance
+- ... and more (15 total)
+
+---
+
+## 🗄️ Database Setup
+
+### Supabase Configuration
+
+1. Create new Supabase project at [supabase.com](https://supabase.com)
+2. Get your project URL and anon key from Settings → API
+3. Add to `.env.local`:
+   ```
+   VITE_SUPABASE_URL=https://xxx.supabase.co
+   VITE_SUPABASE_ANON_KEY=eyJxxx...
+   ```
+
+### Apply Migrations
+
+**Option 1: Supabase Dashboard (easiest)**
+1. Go to SQL Editor in Supabase dashboard
+2. Copy content from `supabase/migrations/` files (in date order)
+3. Run each migration
+
+**Option 2: Migration Scripts**
+```bash
+cd supabase/scripts
+node apply-all-migrations.mjs
+```
+
+**Option 3: Supabase CLI**
+```bash
+supabase db push
+```
+
+---
+
+## 🔐 Security
+
+- **API Keys Encrypted** — OpenAI API keys encrypted before storage
+- **Row Level Security** — Supabase RLS enabled on all tables
+- **Session-based Auth** — Supabase Auth with email/password
+- **No Server Exposure** — Keys decrypted only in browser
+
+---
+
+## 📊 Architecture Overview
+
+### Service Layer
+
+**8 Independent Services** (`src/lib/`):
+
+1. **AssistantService** — OpenAI Assistant CRUD
+2. **VectorStoreService** — Vector Store management
+3. **IntegrationService** — Assistant + Vector Store integration
+4. **OpenAIService** — Threads API operations
+5. **RAGService** — RAG logic and document search
+6. **FileProcessing** — PDF/DOCX/TXT extraction
+7. **Encryption** — API key encryption/decryption
+8. **Supabase** — Database client and types
+
+### State Management
+
+- **Zustand Store** — Centralized state (815 lines)
+- **Actions** — Auth, Chats, Messages, Personalities, Settings
+- **Services** — Singleton instances in state
+
+### Database Schema
+
+5 main tables:
+- `users` — Supabase Auth
+- `chats` — Chat history + OpenAI Thread IDs
+- `messages` — User/assistant messages
+- `personalities` — Custom assistants + metadata
+- `user_settings` — User config + encrypted API keys
+
+**See [.claude/ARCHITECTURE.md](.claude/ARCHITECTURE.md) for details**
+
+---
+
+## 🐛 Known Issues & Technical Debt
+
+### High Priority
+
+1. **Vector Store Cleanup** (`src/store/useStore.ts:765`)
+   - Files deleted from DB but remain in OpenAI Vector Stores
+   - TODO: Add `vector_store_id` tracking for proper cleanup
+
+### Medium Priority
+
+2. **Polling Instead of Webhooks** (`src/store/useStore.ts:286-307`)
+   - Assistant runs checked via polling (every 1s, 30s timeout)
+   - TODO: Migrate to OpenAI webhooks
+
+3. **No Error Boundaries**
+   - React components without Error Boundaries
+   - TODO: Add graceful error handling
+
+### Low Priority
+
+4. **No Tests**
+   - Complete absence of tests
+   - TODO: Add Vitest + Playwright
+
+5. **API Routes in Frontend** (`src/pages/api/retrieval/summarize.ts`)
+   - Won't work in static build
+   - TODO: Migrate to serverless functions
+
+**See [.claude/BACKLOG.md](.claude/BACKLOG.md) for complete list**
+
+---
+
+## 📈 Roadmap
+
+### Near-term
+
+- [ ] Vector Store cleanup mechanism
+- [ ] Error Boundaries
+- [ ] Code splitting & performance optimization
+- [ ] Cost analytics dashboard
+
+### Long-term
+
+- [ ] Real-time collaboration
+- [ ] Voice input/output
+- [ ] Advanced RAG (custom embeddings, hybrid search)
+- [ ] Mobile app (React Native)
+- [ ] Export conversations (PDF, Markdown)
+
+**See [.claude/BACKLOG.md](.claude/BACKLOG.md) for details**
+
+---
+
+## 🤝 Contributing
+
+This project uses **Claude Code Starter Framework v2.1.1** for AI-driven development.
+
+### For AI Agents
+
+Run `начать` or `start` to load context and begin work.
+
+### For Humans
+
+1. Check [.claude/BACKLOG.md](.claude/BACKLOG.md) for open tasks
+2. Create feature branch
+3. Make changes
+4. Run `npm run lint`
+5. Submit PR
+
+---
+
+## 📄 License
+
+Private project — see repository settings for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with [Claude Code](https://claude.com/code)
+- Framework: [Claude Code Starter](https://github.com/anthropics/claude-code)
+- Powered by [OpenAI Assistants API](https://platform.openai.com/docs/assistants)
+- Backend: [Supabase](https://supabase.com)
+
+---
+
+*Developed with Claude Code Starter Framework v2.1.1*
+*Last updated: 2025-12-08*

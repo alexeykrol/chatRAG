@@ -1,6 +1,6 @@
 # Working with Claude Code Starter Framework
 
-> 🤖 This project uses **Claude Code Starter Framework v2.0** for AI-assisted development.
+> 🤖 This project uses **Claude Code Starter Framework v2.1.1** for AI-assisted development.
 
 ## Quick Reference
 

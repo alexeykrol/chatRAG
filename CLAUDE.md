@@ -1,6 +1,6 @@
 # CLAUDE.md — AI Agent Instructions
 
-**Framework:** Claude Code Starter v2.0
+**Framework:** Claude Code Starter v2.1.1
 **Type:** Meta-framework extending Claude Code capabilities
 
 ## Triggers
@@ -53,7 +53,7 @@ Read `.claude/SNAPSHOT.md` — current version, what's in progress
 ### Step 4: Confirm
 ```
 Context loaded. Directory: [pwd]
-Framework: Claude Code Starter v2.0
+Framework: Claude Code Starter v2.1.1
 Ready to work!
 ```
 
@@ -70,7 +70,7 @@ npm run build
 - `.claude/BACKLOG.md` — mark completed tasks `[x]`
 - `.claude/SNAPSHOT.md` — update version and status
 - `CHANGELOG.md` — add entry (if release)
-- `README.md` + `README_RU.md` — update if major features added
+- `README.md` — update if major features added
 - `.claude/ARCHITECTURE.md` — update if code structure changed
 
 ### 3. Export Dialogs
@@ -131,7 +131,7 @@ claude-code-starter/
 ├── tsconfig.json           # TypeScript config
 ├── CLAUDE.md               # THIS FILE
 ├── CHANGELOG.md            # Version history
-├── README.md / README_RU.md
+├── README.md
 └── init-project.sh         # Installer (for distribution)
 ```
 
@@ -167,4 +167,4 @@ npm run dialog:list     # List sessions
 - ALWAYS mark session clean at completion
 
 ---
-*Framework: Claude Code Starter v2.1.0 | Updated: 2025-12-08*
+*Framework: Claude Code Starter v2.1.1 | Updated: 2025-12-08*

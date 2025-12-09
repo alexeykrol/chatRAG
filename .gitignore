@@ -26,10 +26,26 @@ push_git.sh
 # Environment variables - all variants
 .env*
 !.env.example
+
+# Dialog export (gitignored by default)
 dialog/
 html-viewer/
+
+# Claude framework runtime
 .claude/.last_session
 .claude/.backup-*
+.claude/templates/
+
+# Legacy files and backups
+.claude/.backup-legacy-files/
+**/backup/
+**/archive/
+**/*backup*/
+**/*archive*/
+**/*legacy*/
+*.bak
+*.backup
+*.old
 
 # Claude dialogs
 dialog/2025-12-08_session-e80e5a6a.md
