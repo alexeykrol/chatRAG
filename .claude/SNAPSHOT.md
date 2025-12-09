@@ -1,33 +1,46 @@
-# SNAPSHOT — ChatOpenAII_3
+# SNAPSHOT — chatRAG
 
 *Last updated: 2025-12-08*
 
 ## Current State
 
-**Version:** 0.0.0
-**Status:** Initial setup with Claude Code Starter Framework
-**Branch:** 3.0
+**Version:** 0.1.0
+**Status:** Clean setup with Claude Code Starter Framework v2.1.1
+**Branch:** main
 
 ## Project Overview
 
-**Name:** ChatOpenAII_3
-**Description:** > 🤖 **AI Development:** This project uses [Claude Code Starter Framework](./FRAMEWORK_GUIDE.md). See [usage guide](./FRAMEWORK_GUIDE.md) for details.
+**Name:** chatRAG
+**Description:** RAG (Retrieval-Augmented Generation) chat application with AI development framework
 
 **Tech Stack:**
 
 - Node.js/JavaScript
+- React
+- Supabase
+- Claude Code Starter Framework v2.1.1
 
 ## Current Structure
 
 ```
-ChatOpenAII_3/
-Run 'tree -L 2' or 'ls -la' to see structure
+chatRAG/
+├── src/                    # Application source code
+├── .claude/                # Framework meta files
+│   ├── commands/           # 15 slash commands
+│   ├── SNAPSHOT.md         # This file
+│   ├── BACKLOG.md          # Task tracking
+│   └── ARCHITECTURE.md     # Code structure
+├── CLAUDE.md               # AI agent instructions
+├── FRAMEWORK_GUIDE.md      # Framework documentation
+└── README.md               # Project documentation
 ```
 
 ## Recent Progress
 
-- [x] Initialized Claude Code Starter Framework
-- [ ] Add your completed tasks here
+- [x] Initialized Claude Code Starter Framework v2.1.1
+- [x] Migrated from ChatOpenAII_3 to chatRAG repository
+- [x] Cleaned up legacy files (moved to .claude/.backup-legacy-files/)
+- [x] Set main as default branch
 
 ## Active Work
 
