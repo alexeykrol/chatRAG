@@ -7,11 +7,17 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dialog:export": "node .claude/dist/claude-export/cli.js export",
+    "dialog:list": "node .claude/dist/claude-export/cli.js list",
+    "dialog:ui": "node .claude/dist/claude-export/server.js",
+    "dialog:watch": "node .claude/dist/claude-export/watcher.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.56.0",
+    "chokidar": "^5.0.0",
     "dotenv": "^17.2.2",
+    "express": "^4.22.1",
     "lucide-react": "^0.344.0",
     "mammoth": "^1.10.0",
     "openai": "^5.16.0",

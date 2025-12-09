@@ -30,3 +30,6 @@ dialog/
 html-viewer/
 .claude/.last_session
 .claude/.backup-*
+
+# Claude dialogs
+dialog/2025-12-08_session-1792f024.md
